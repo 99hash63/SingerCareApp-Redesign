@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:id="@+id/card_pertanyaan"
+    android:outlineSpotShadowColor="@color/dark_grey"
+    android:outlineAmbientShadowColor="@color/dark_grey"
+    card_view:cardElevation="15dp"
+    card_view:cardBackgroundColor="#FFFF"
+    card_view:cardCornerRadius="8dp"
+    card_view:contentPadding="10dp"
+    android:foreground="?selectableItemBackground"
+    android:clickable="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/history_history_dp"
+            android:layout_width="71dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="2dp"
+
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.0"/>
+
+        <TextView
+            android:id="@+id/history_history_title"
+            android:layout_width="233dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="TextView"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            card_view:layout_constraintStart_toEndOf="@+id/history_history_dp"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/history_history_category"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_width="245dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="2dp"
+            android:text="TextView"
+            card_view:layout_constraintStart_toStartOf="@+id/history_history_title"
+            card_view:layout_constraintTop_toBottomOf="@+id/history_history_title" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="65dp"
+            android:layout_height="14dp"
+            android:text="Completed"
+            android:textAlignment="viewEnd"
+            android:textStyle="bold"
+            android:textColor="#1DAB13"
+            android:textSize="9dp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/history_history_datediff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="viewEnd"
+            android:textSize="9dp"
+            card_view:layout_constraintEnd_toEndOf="@+id/textView"
+            card_view:layout_constraintHorizontal_bias="1.0"
+            card_view:layout_constraintStart_toStartOf="@+id/textView"
+            card_view:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <android.widget.Button
+            android:id="@+id/rate_my_service"
+            android:layout_width="105dp"
+            android:layout_height="21dp"
+            android:background="@drawable/rate_my_service_btn"
+            android:layout_marginBottom="9dp"
+            android:textSize="10dp"
+            android:visibility="invisible"
+            android:textColor="#FF5864"
+            android:text="Rate my service"
+            android:textAllCaps="false"
+            card_view:layout_constraintBottom_toTopOf="@+id/history_history_title"
+            card_view:layout_constraintStart_toStartOf="@+id/history_history_title" />
+        <RatingBar
+            android:id="@+id/ratingBarDisplay"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginStart="16dp"
+            android:numStars="5"
+            android:isIndicator="true"
+            android:progressTint="@color/soft_pink"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/history_history_dp"
+            card_view:layout_constraintTop_toTopOf="@+id/history_history_dp"
+            card_view:layout_constraintVertical_bias="0.125" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
